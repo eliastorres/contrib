@@ -24,6 +24,12 @@ else
     MEGACLI='/opt/MegaRAID/MegaCli/MegaCli'
 fi
 
+# For Debian/Ubuntu
+if [[ -x /usr/sbin/megacli ]]
+then
+    MEGACLI='/usr/sbin/megacli'
+fi
+
 if [[ ! -x $MEGACLI ]]
 then
     echo "FATAL ERROR: $MEGACLI not found or not executable!"
